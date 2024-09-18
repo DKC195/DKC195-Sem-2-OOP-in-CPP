@@ -1,26 +1,25 @@
-/* Write a program to set a structure to hold a date (mm,dd and yy), assign values to the members of the structure 
-and print out the values in the format 11/28/2004 by function. Pass the structure to the function. */
+/* Write a program to set a structure to hold a date (mm,dd and yy), assign
+values to the members of the structure and print out the values in the format
+11/28/2004 by function. Pass the structure to the function. */
 #include <iostream>
 using namespace std;
 
-struct Date
-{
+struct Date {
   int mm;
   int dd;
   int yy;
 };
 
-void pdate(Date d) {
-  if(d.mm < 10)
+void printDate(Date d) {
+  if (d.mm < 10)
     cout << "0";
   cout << d.mm << "/";
-  if(d.dd < 10)
+  if (d.dd < 10)
     cout << "0";
-    cout << d.dd << "/" << d.yy;
+  cout << d.dd << "/" << d.yy;
 }
 
-int main()
-{
+int main() {
   Date d;
   cout << "Enter The Year: \t";
   cin >> d.yy;
@@ -29,7 +28,7 @@ int main()
   cout << "Enter The Date: \t";
   cin >> d.dd;
 
-  pdate(d);
+  printDate(d);
 
   return 0;
 }

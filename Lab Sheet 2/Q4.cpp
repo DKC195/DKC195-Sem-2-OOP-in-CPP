@@ -1,17 +1,17 @@
-// Write a function that passes two temperatures by reference and sets the larger of the two numbers to a value entered by user by using return by reference.
+// Write a function that passes two temperatures by reference and sets the
+// larger of the two numbers to a value entered by user by using return by
+// reference.
 #include <iostream>
 using namespace std;
 
-int &temp(int &x, int &y)
-{
+int &temp(int &x, int &y) {
   if (*&x < *&y)
-    return x;
-  else
     return y;
+  else
+    return x;
 }
 
-int main()
-{
+int main() {
   int a, x, y;
 
   cout << "Enter 1st Number: ";
@@ -23,7 +23,7 @@ int main()
   cin >> a;
   temp(x, y) = a;
 
-  cout << "Set Value: " << x;
+  cout << "Set Value: " << x << ", " << y;
 
   return 0;
 }

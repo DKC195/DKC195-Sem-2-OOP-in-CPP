@@ -1,26 +1,23 @@
-/* Write a program that displays the current monthly salary of chief executive officer, information officer, and system analyst,
-programmer that has been increased by 9, 10, 12, and 12 percentages respectively in year 2010. Let us assume that the salaries in year 2009 are
+/* Write a program that displays the current monthly salary of chief executive
+officer, information officer, and system analyst, programmer that has been
+increased by 9, 10, 12, and 12 percentages respectively in year 2010. Let us
+assume that the salaries in year 2009 are
 - Chief executive officer Rs. 35000/m
 - Information officer Rs. 25000/m
 - System analyst Rs. 24000/m
 - Programmer Rs. 18000/m
-> Make a function that takes two arguments; one salary and the other increment. Use proper default argument. */
+> Make a function that takes two arguments; one salary and the other increment.
+Use proper default argument. */
 #include <iostream>
 using namespace std;
 
-int inc(int salary, int increment)
-{
+int inc(int salary = 18000, int increment = 9) {
   return salary * increment / 100;
 }
 
-inline void print()
-{
-  cout << endl
-       << "Current Monthly Salary of ";
-}
+inline void print() { cout << endl << "Current Monthly Salary of "; }
 
-int main()
-{
+int main() {
   cout << "Monthly Salary";
   print();
   cout << "Chief Executive Officer is " << inc(35000, 9);
